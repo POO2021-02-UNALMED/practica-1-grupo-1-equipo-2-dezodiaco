@@ -1,6 +1,14 @@
+/*
+Enumerador para clasificar a las habilidades por tipo
+
+Autor: Edwin
+*/
+
+
 package complementario;
 
 public enum TipoHabilidad {
+
 	
 	SANACION,
 	APOYOFISICO,
@@ -8,8 +16,7 @@ public enum TipoHabilidad {
 	DEFENSAFISICA,
 	DEFENSAMAGICA,
 	ATAQUEFISICO,
-	ATAQUEMAGICO,
-	ESPECIAL;
+	ATAQUEMAGICO;
 
 
 }

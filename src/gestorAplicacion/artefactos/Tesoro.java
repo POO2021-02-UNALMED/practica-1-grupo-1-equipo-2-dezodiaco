@@ -1,24 +1,47 @@
+/*
+Los tesoros aparecen al ganar una batalla y al azar se te otorga un objeto,
+que puede ser de cualquier tipo. En los nodos superiores aparecen tesoros 
+que contienen objetos con mejores atributos
+
+Autor : Camilo
+
+
+*/
 package artefactos;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-class Tesoro {
+public class Tesoro implements Serializable{
 	
-	private enum rarezas{ //Rarezas en orden creciente de nivel
-		NORMAL,
-		EPICA,
-		LEGENDARIA,
-		DEFINITIVA
-	}
 	
-	private final rarezas rareza;
+	private static final long serialVersionUID = 1L;
+	
 	private final String nombre;
-	private final int precio;
-	private ArrayList<Objeto> recompensas = new ArrayList<Objeto>();
+	private ArrayList<Objeto> recompensas = new ArrayList<Objeto>();  //Objetos disponibles en un tesoror
 	
 	
-	public Tesoro(rarezas rareza,String nombre,int precio) {
-		this.rareza = rareza;
+	public Tesoro(String nombre,ArrayList<Objeto> recompensas) {
 		this.nombre = nombre;
-		this.precio = precio;
+		this.recompensas = recompensas;
 	}
+
+
+	public ArrayList<Objeto> getRecompensas() {
+		return recompensas;
+	}
+
+
+	public void setRecompensas(ArrayList<Objeto> recompensas) {
+		this.recompensas = recompensas;
+	}
+
+
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	
+	
+	
 }

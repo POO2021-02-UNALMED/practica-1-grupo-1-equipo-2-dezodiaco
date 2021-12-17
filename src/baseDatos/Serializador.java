@@ -1,3 +1,8 @@
+/*Clase para serializar el personaje del usuario y los nodos de combate 
+ 
+  Autor: Camilo
+ * */
+
 package baseDatos;
 
 import java.io.FileNotFoundException;

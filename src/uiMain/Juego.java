@@ -1,11 +1,15 @@
 package uiMain;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.Scanner;
 
 import artefactos.Objeto;
 import artefactos.Tesoro;
+import baseDatos.Deserializador;
+import complementario.Clases;
 import complementario.Habilidad;
+import complementario.Nodo;
 import complementario.TipoDeObjeto;
 import complementario.TipoEfecto;
 import complementario.TipoHabilidad;
@@ -350,6 +354,165 @@ System.out.println("øDeseas empezar un juego nuevo o cargar la partida guardada?
 		diosesNodo3.add(geminis);
 		diosesNodo3.add(capricornio);
 		diosesNodo3.add(tauro);
+		
+		//Enemigos nodo1
+				Peleador enemigo1n1 = new Peleador(100, "Manticora", 15, 10, 16, 12, armaH2, armaduraH6, anillo0, 0, null, Clases.ENEMIGO);
+				
+				// Enemigos nodo 2
+				Peleador enemigo1n2 = new Peleador(130, "Martiwax", 17, 13, 20, 14, armaH4, armaduraL, anilloL, 0, null, Clases.ENEMIGO);
+				Peleador enemigo2n2 = new Peleador(130, "Reaper", 16, 17, 17, 13, armaH3, armaduraM, anilloL, 0, null, Clases.ENEMIGO);
+				
+				//Enemigo nodo 3
+				Peleador enemigo1n3 = new Peleador(160, "Asediador de almas", 21, 20, 22, 16, espadaT1, armaduraM, anilloM, 0, null, Clases.ENEMIGO);
+				
+
+				
+				enemigo1n1.setHabilidades(habilidades);
+				enemigo1n2.setHabilidades(habilidades1);
+				enemigo2n2.setHabilidades(habilidades2);
+				enemigo1n3.setHabilidades(habilidades3);
+				
+				
+				// Creacion de totems
+				Totem totem1 = new Totem("Kali", habilidad1, ballestaT);
+				Totem totem2 = new Totem("Hathor", habilidad2, lanzaT);
+				Totem totem3 = new Totem("Horus", habilidad4, armaduraM);
+				Totem totem4 = new Totem("Lugh", habilidad6, anilloM);
+				Totem totem5 = new Totem("Lakshmi", habilidad14, bastonT);
+				
+				ArrayList<Totem> Totems = new ArrayList<Totem>();    
+				Totems.add(totem1);		
+				Totems.add(totem2);
+				Totems.add(totem3);
+				Totems.add(totem4);
+				Totems.add(totem5);
+				
+				
+				Sabio sabio = new Sabio("Sabio", habilidades, new ArrayList<Objeto>(), new ArrayList<Peleador>(), 0, 0, Totems);       
+				
+				
+				ArrayList<Peleador> misionCombate = new ArrayList<Peleador>();  //lista de ensayo para las misiones de combate.
+				misionCombate.add(enemigo1n1);
+				misionCombate.add(enemigo1n2);
+				misionCombate.add(enemigo1n3);
+				
+				ArrayList<Objeto> misionBusqueda = new ArrayList<Objeto>();  //lista de ensayo para las misiones de b√∫squeda.
+				misionBusqueda.add(anilloL);
+				misionBusqueda.add(armaduraM);
+				misionBusqueda.add(varitaT1);
+				
+				
+				File archivo = new File(System.getProperty("user.dir")+"/src/baseDatos/temp/personajes.txt");
+				if(archivo.isFile()) {  
+					personaje = Deserializador.deserializarPersonaje();
+					ArrayList<Nodo> nodoSerializados = Deserializador.deserializarNodos();
+					Nodo.setNodos(nodoSerializados);
+					
+					
+				}
+				else{
+					Hashtable<Integer,String> clasesNumeradas = new Hashtable<Integer,String>();
+					clasesNumeradas.put(1, "Guerrero" );
+					clasesNumeradas.put(2, "Arquero" );
+					clasesNumeradas.put(3, "Brujo");
+					Hashtable<Integer,Clases> numeroClase = new Hashtable<Integer,Clases>(); 
+					numeroClase.put(1,Clases.GUERRERO);
+					numeroClase.put(2,Clases.ARQUERO);
+					numeroClase.put(3,Clases.BRUJO);
+					
+					System.out.println("Estas son las clases de personaje que puedes elegir "+"\n");
+					System.out.println("1: Guerrero");
+					System.out.println("2: Arquero");
+					System.out.println("3: Brujo\n");
+					
+					boolean verificadorClase = false;
+					int claseUsuario = 0;
+					do {
+						System.out.print("Seleccionar la clase: " );
+						claseUsuario = read();
+						verificadorClase = (claseUsuario == 1 || claseUsuario == 2 || claseUsuario == 3);
+						if (verificadorClase == true) {
+							System.out.println("Has seleccionado la clase "+clasesNumeradas.get(claseUsuario));
+							break;
+						}
+						else {
+							System.out.println("Selecciona alguna de las clases");
+						}
+					}while (verificadorClase == false);
+					
+				
+					//Scanner prueba = new Scanner(System.in);
+					boolean verificadorNombre = true;
+					String nombreUsuario ; 
+
+					
+					//Validaci√≥n del nombre
+					do {
+						System.out.print("Escribe tu nombre: ");
+						nombreUsuario = readStr();
+						verificadorNombre = !nombreUsuario.isEmpty();
+						if (verificadorNombre == true) {
+							System.out.println("Tu personaje es un "+clasesNumeradas.get(claseUsuario)+" llamado "+nombreUsuario+"\n" );
+							break;
+						}
+						else {
+							System.out.println("Por favor ingrese un nombre para el personaje");
+						}
+					}while (verificadorNombre == false);
+					
+					
+					personaje = new Peleador(numeroClase.get(claseUsuario),nombreUsuario);
+					personaje.setHabilidades(habilidadesPeleadores);
+					personaje.setFragmentos(4);
+					
+					Nodo nodo0 = new Nodo("Zona inicial",null,new ArrayList<Nodo>(),false,new ArrayList<Peleador>(),new ArrayList<Tesoro>());
+					Nodo nodo1 = new Nodo("Valle de las sombras",diosesNodo1,new ArrayList<Nodo>(),true,new ArrayList<Peleador>(),new ArrayList<Tesoro>());
+					Nodo nodo2 = new Nodo("Monte helado",diosesNodo2,new ArrayList<Nodo>(),false,new ArrayList<Peleador>(),new ArrayList<Tesoro>());
+					Nodo nodo3 = new Nodo("Laguna de los gritos",diosesNodo3,new ArrayList<Nodo>(),false,new ArrayList<Peleador>(),new ArrayList<Tesoro>());
+					
+					//Conexiones desde el nodo 1
+					ArrayList<Nodo> conexionesNodo1 = new ArrayList<Nodo>();
+					conexionesNodo1.add(nodo2);
+					conexionesNodo1.add(nodo3);
+					nodo1.setConexiones(conexionesNodo1);
+					
+					// Conexiones desde el nodo 2
+					ArrayList<Nodo> conexionesNodo2 = new ArrayList<Nodo>();
+					conexionesNodo2.add(nodo3);
+					nodo2.setConexiones(conexionesNodo2);
+					
+								
+					// AÒadir enemigos a los nodos
+					ArrayList<Peleador> enemigosN1= new ArrayList<Peleador>();
+					enemigosN1.add(enemigo1n1);
+					nodo1.setEnemigos(enemigosN1);
+					
+					ArrayList<Peleador> enemigosN2 = new ArrayList<Peleador>();
+					enemigosN2.add(enemigo1n2);
+					enemigosN2.add(enemigo2n2);
+					nodo2.setEnemigos(enemigosN2);
+					
+					ArrayList<Peleador> enemigosN3 = new ArrayList<Peleador>();
+					enemigosN3.add(enemigo1n3);
+					nodo3.setEnemigos(enemigosN3);
+					
+					nodo1.setDioses(diosesNodo1);
+					nodo2.setDioses(diosesNodo2);
+					nodo3.setDioses(diosesNodo3);
+					
+					nodo1.getTesoros().add(tesoro1);
+					nodo2.getTesoros().add(tesoro2);
+					nodo3.getTesoros().add(tesoro3);
+					
+					
+					
+				}
+				
+
+				
+				
+				System.out.println("Los dioses te han teletransportado al camino de los doce, un lugar magico");
+				System.out.println("donde podras acceder a diversos lugares para completar tu mision.\n");
 
 	}
 

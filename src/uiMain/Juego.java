@@ -277,6 +277,79 @@ System.out.println("¿Deseas empezar un juego nuevo o cargar la partida guardada?
 		habilidades5.add(habilidad6);
 		habilidades5.add(habilidad14);
 		habilidades5.add(habilidad15);
+		
+		ArrayList<Habilidad> habilidadesPeleadores = new ArrayList<Habilidad>();
+		habilidadesPeleadores.add(habilidad2);
+		habilidadesPeleadores.add(habilidad6);
+		habilidadesPeleadores.add(habilidad12);
+		
+	
+		
+		
+		//Creacion de dioses
+		Dios aries = new Dios("Aries");
+		Dios virgo = new Dios("Virgo");
+		Dios escorpio = new Dios("Escorpio");
+		Dios tauro = new Dios("Tauro");
+		Dios geminis = new Dios("Geminis");
+		Dios cancer = new Dios("Cancer");
+		Dios leo = new Dios("Leo");
+		Dios libra = new Dios("Libra");
+		Dios sagitario = new Dios("Sagitario");
+		Dios capricornio = new Dios("Capricornio");
+		Dios acuario = new Dios("Acuario");
+		Dios piscis = new Dios("Piscis");
+		
+		//Asignar habilidades a los dioses
+		tauro.setHabilidades(habilidades4);
+		aries.setHabilidades(habilidades5);
+		geminis.setHabilidades(habilidades5);
+		cancer.setHabilidades(habilidades4);
+		leo.setHabilidades(habilidades5);
+		virgo.setHabilidades(habilidades4);
+		libra.setHabilidades(habilidades5);
+		escorpio.setHabilidades(habilidades4);
+		sagitario.setHabilidades(habilidades5);
+		capricornio.setHabilidades(habilidades4);
+		acuario.setHabilidades(habilidades5);
+		piscis.setHabilidades(habilidades4);
+		
+		
+		
+		ArrayList<Dios> dioses = new ArrayList<Dios>();
+		dioses.add(tauro);
+		dioses.add(aries);
+		dioses.add(geminis);
+		dioses.add(cancer);
+		dioses.add(leo);
+		dioses.add(virgo);
+		dioses.add(escorpio);
+		dioses.add(sagitario);
+		dioses.add(capricornio);
+		dioses.add(acuario);
+		dioses.add(piscis);
+		dioses.add(libra);
+		
+		
+
+		//Asignacion de dioses a las listas para los nodos
+		ArrayList<Dios> diosesNodo1 = new ArrayList<Dios>();
+		diosesNodo1.add(leo);
+		diosesNodo1.add(libra);
+		diosesNodo1.add(cancer);
+		diosesNodo1.add(sagitario);
+		
+		ArrayList<Dios> diosesNodo2 = new ArrayList<Dios>();
+		diosesNodo2.add(aries);
+		diosesNodo2.add(acuario);
+		diosesNodo2.add(virgo);
+		diosesNodo2.add(piscis);
+		
+		ArrayList<Dios> diosesNodo3 = new ArrayList<Dios>();
+		diosesNodo3.add(escorpio);
+		diosesNodo3.add(geminis);
+		diosesNodo3.add(capricornio);
+		diosesNodo3.add(tauro);
 
 	}
 

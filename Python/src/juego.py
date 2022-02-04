@@ -1173,7 +1173,7 @@ if __name__ == "__main__":
             
 
         def cargarPartida():
-            global personaje
+            global personaje,numClase
             if os.path.exists("serializacion"): 
                 lecturaFichero = open("serializacion","rb")
                 lista = pk.load(lecturaFichero)
@@ -1182,7 +1182,8 @@ if __name__ == "__main__":
                 nodo3.setAbierto(lista[2])
                 sabio.setHabilidades(lista[3])
                 pacho.setObjetos(lista[4])
-
+                numClase = personaje.getClase().value
+                frameInicio.place_forget()
                 lecturaFichero.close()
 
                 if nodo2.isAbierto():

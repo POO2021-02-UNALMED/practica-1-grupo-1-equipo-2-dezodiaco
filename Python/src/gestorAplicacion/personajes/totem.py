@@ -2,7 +2,7 @@
 Cada totem relaciona con el personaje ofreciendole mejoras en sus atributos, puede ayudarlo una vez o obsequiarle 
 un objeto sagrado a cambio de su existencia, desaparecerá al instante.
 
-Autor: Yeferson
+Autor: Yeferson, Camilo, Edwin
 '''
 
 from .guardian import Guardian

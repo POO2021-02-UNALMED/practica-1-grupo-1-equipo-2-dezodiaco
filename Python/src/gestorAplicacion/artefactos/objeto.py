@@ -2,7 +2,7 @@
 Se implementa para la creación de los objetos que van a estar presentes en el juego
 
 
-Autores: Camilo, Yeferson 
+Autores: Camilo, Yeferson, Edwin
 '''
 
 

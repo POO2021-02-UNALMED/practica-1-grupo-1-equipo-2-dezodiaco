@@ -1,7 +1,7 @@
 ﻿'''
 Implementación de la clase abstracta. define el método apoyar
 
-Autor: Yeferson
+Autor: Yeferson, Camilo, Edwin
 '''
 
 class Guardian:

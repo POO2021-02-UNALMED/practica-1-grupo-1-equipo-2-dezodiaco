@@ -1,7 +1,7 @@
 ﻿'''
 Interactua con los peleadores otorgando y enseñando habilidades.
 
-Autor: Yeferson 
+Autor: Yeferson, Camilo, Edwin
 '''
 
 import random

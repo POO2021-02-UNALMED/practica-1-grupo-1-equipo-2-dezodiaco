@@ -2,7 +2,7 @@
 Las habilidades pueden modificar o revertir las estadísticas de un personaje con 
 los métodos modificarEstadística y revertirEstadistica respectivamente.
 
-Autores: Edwin, Camilo.
+Autores: Edwin, Camilo, Yeferson
 '''
 
 from functools import partial

@@ -4,7 +4,7 @@ Es esta clase se crea el Sabio, ente que se relaciona con el jugador cuando este
 Dentro de las funciones del sabio está asignar las misiones tanto de lucha como de combate
 y además de verificar que se cumplan.
 
-Autores: Yeferson, Edwin
+Autores: Yeferson, Edwin, Camilo
 '''
 
 from .dios import Dios

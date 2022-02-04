@@ -3,7 +3,7 @@ Los tesoros aparecen al ganar una batalla y al azar se te otorga un objeto,
 que puede ser de cualquier tipo. En los nodos superiores aparecen tesoros 
 que contienen objetos con mejores atributos
 
-Autor : Camilo
+Autor : Camilo, Yeferson, Edwin
 
 
 '''

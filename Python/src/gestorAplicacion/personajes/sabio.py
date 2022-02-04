@@ -38,7 +38,7 @@ class Sabio(Dios):
     def asignarMisionB(self, objeto):
         self._Objetos.append(objeto)
         self._misionesB += 1
-        return "Se te ha asignado una misión, debes encontar " + objeto.getNombre() + ", puedes encontrarlo en un tesoro o como recompensa al vencer un enemigo."
+        return "Se te ha asignado una misión, debes encontrar " + objeto.getNombre() + ", puedes encontrarlo en un tesoro o como recompensa al vencer un enemigo."
 
     def asignarMisionC(self, enemigo):
         self._Oponentes.append(enemigo)

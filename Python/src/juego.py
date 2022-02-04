@@ -1750,7 +1750,7 @@ if __name__ == "__main__":
                         if fragmentos == 0:
                             texto1 = "No has cumplido ninguna misión, regresa cuando hayas completado \nal menos una para poder reclamar recompensas."
                         else:
-                            texto1 = "Has recibido "+ str(fragmentos) +" por cumplir misiones."
+                            texto1 = "Has recibido "+ str(fragmentos) +" fragmentos por cumplir misiones."
                             personaje.agregarPocion(pocion)
                             messagebox.showinfo(message="Los dioses te han obsequiado " + pocion.getNombre() + " por cumplir esta misión")
                             

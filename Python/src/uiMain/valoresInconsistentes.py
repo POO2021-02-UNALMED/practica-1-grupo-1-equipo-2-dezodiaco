@@ -1,3 +1,8 @@
+'''
+Excepción para valores inconsistentes, hereda de ErrorAplicacion.
+
+Autor: Edwin
+'''
 from .errorAplicacion import ErrorAplicacion
 
 class ValoresInconsistentes(ErrorAplicacion):

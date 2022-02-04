@@ -1,3 +1,10 @@
+'''
+Se guardan las constantes como mensajes y valores del juego
+
+autor: Edwin
+'''
+
+
 from tkinter import *
 from tkinter import messagebox
 

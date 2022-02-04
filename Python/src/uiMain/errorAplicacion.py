@@ -1,3 +1,9 @@
+'''
+Se crea la clase padre para las exepciones.
+
+autor: Camilo
+'''
+
 class ErrorAplicacion(Exception):
     
     def __init__(self, mensaje):

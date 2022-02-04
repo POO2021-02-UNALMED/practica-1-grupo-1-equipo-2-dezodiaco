@@ -1,3 +1,10 @@
+'''
+Clase para manejar el ingreso del nombre
+
+autor: Camilo
+'''
+
+
 from uiMain.valoresInconsistentes import ValoresInconsistentes
 
 

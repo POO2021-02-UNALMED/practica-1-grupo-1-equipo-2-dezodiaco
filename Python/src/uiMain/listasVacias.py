@@ -1,3 +1,9 @@
+'''
+Excepción para las listas vacías
+
+autor: Yeferson
+'''
+
 from uiMain.valoresInconsistentes import ValoresInconsistentes
 
 

@@ -1,3 +1,9 @@
+'''
+Excepción para referencias nulas, hereda de ErrorAplicacion.
+
+Autor: Edwin
+'''
+
 from .errorAplicacion import ErrorAplicacion
 
 class ReferenciasNulas(ErrorAplicacion):

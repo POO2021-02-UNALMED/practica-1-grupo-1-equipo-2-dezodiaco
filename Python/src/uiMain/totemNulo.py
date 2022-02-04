@@ -1,3 +1,8 @@
+'''
+Excepción para valores nulos al invocar el Totem, hereda de ReferenciasNulas.
+
+Autor: Edwin
+'''
 
 from uiMain.referenciasNulas import ReferenciasNulas
 

@@ -1,4 +1,8 @@
+'''
+Excepción para controlar referencias a objetos nulos.
 
+autor: Camilo
+'''
 from uiMain.referenciasNulas import ReferenciasNulas
 
 

@@ -64,13 +64,14 @@ def mostrarTesoro(combate,personaje):
     combate.place_forget()
     tesoro._cofre1.place(x=200,y=100)
     marco.place(x=0,y=0)
-    abrir = Button(marco,text="ABRIR",font=("Arial",15),command=lambda: abrirCofre(combate,personaje,combate.getNodo(),tesoro))
+    abrir = Button(marco,text="ABRIR",font=("Arial",15),command=lambda: abrirCofre(combate,personaje,combate.getNodo(),tesoro,abrir))
     abrir.place(x=320,y=380)
     
 
 
 
-def abrirCofre(combate,personaje,nodo,tesoro):
+def abrirCofre(combate,personaje,nodo,tesoro,boton):
+    boton.config(state=DISABLED)
     tesoro._cofre1.place_forget()
     time.sleep(0.5)
     tesoro._cofre2.place(x=200,y=100)

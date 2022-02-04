@@ -4,7 +4,6 @@ Personajes principales y enemigos
 Autores: Camilo, Edwin, Yeferson
 '''
 
-from functools import partial
 import random
 from gestorAplicacion.personajes.dios import castigar
 from gestorAplicacion.artefactos.tesoro import mostrarTesoro
@@ -43,10 +42,10 @@ class Peleador:
         self._totem = None
         self._efectos = [0,0,0,0,0]
         
-        anillo = Objeto("Anillo de principiante",None, 5, TipoDeObjeto.ANILLO, 2,2,0,0,1, False,"anillo5.png")
+        anillo = Objeto("Anillo de principiante",None, 5, TipoDeObjeto.ANILLO, 2,2,0,0,3, False,"anillo5.png")
 
         if clase == Clases.ARQUERO:
-            self._vida = 13
+            self._vida = 100
             self._ataqueFisico = 25
             self._ataqueMagico = 25
             self._defensaFisica = 15
@@ -68,8 +67,8 @@ class Peleador:
             self._anillo = anillo
             self._oro = 100
         elif clase == Clases.GUERRERO:
-            self._vida = 131
-            self._ataqueFisico = 352
+            self._vida = 100
+            self._ataqueFisico = 35
             self._ataqueMagico = 13
             self._defensaFisica = 18
             self._defensaMagica = 12

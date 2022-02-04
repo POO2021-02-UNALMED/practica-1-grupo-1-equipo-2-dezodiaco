@@ -712,18 +712,20 @@ if __name__ == "__main__":
                 
                 confirmar = messagebox.askyesno(title="Confirmar",message="¿Deseas reparar este objeto por 20 de oro?")
 
-                if personaje.getOro()<20:
-                    messagebox.showinfo(title="Verificación",message="No tienes suficiente oro para reparar este objeto")
-                else:
-                    if len(personaje.getInventario()) < 12:
-                        label.place_forget()
-                        Peleador.getAlmacen().remove(objeto)
-                        personaje.getInventario().append(objeto)
-                        personaje.setOro(personaje.getOro()-20)
-                        messagebox.showinfo(title="Pacho",message="He logrado reparar este objeto, procura no volver a dañarlo")
+                if confirmar:
+                    if personaje.getOro()<20:
+                        messagebox.showinfo(title="Verificación",message="No tienes suficiente oro para reparar este objeto")
                     else:
-                        messagebox.showwarning(title="Inventario",message="No tienes suficiente espacio en el inventario para almacenar este objeto")
-            
+                        if len(personaje.getInventario()) < 12:
+                            label.place_forget()
+                            Peleador.getAlmacen().remove(objeto)
+                            objeto.setDurabilidad(3)
+                            personaje.getInventario().append(objeto)
+                            personaje.setOro(personaje.getOro()-20)
+                            messagebox.showinfo(title="Pacho",message="He logrado reparar este objeto, procura no volver a dañarlo")
+                        else:
+                            messagebox.showwarning(title="Inventario",message="No tienes suficiente espacio en el inventario para almacenar este objeto")
+                
 
             for i in range(len(listaLabels)):
 

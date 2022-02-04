@@ -1,3 +1,10 @@
+'''
+Interfaz del usuario, se crean las instancias bases para el desarrollo del juego 
+y se presentan los distintos menus del juego.
+
+Autores: Yeferson, Camilo, Edwin.
+'''
+
 from functools import partial
 import math
 import os

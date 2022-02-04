@@ -1,3 +1,12 @@
+'''
+Marco plantilla para los combates en los nodos
+
+autores: Edwin, Camilo, Yeferson
+
+'''
+
+
+
 from functools import partial
 import math
 from tkinter import *

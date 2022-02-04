@@ -1,4 +1,10 @@
-﻿from enum import Enum
+﻿'''
+Enumerador para los tipo de objetos.
+
+Autor: Edwin
+'''
+
+from enum import Enum
 from tkinter import *
 
 class TipoDeObjeto(Enum):

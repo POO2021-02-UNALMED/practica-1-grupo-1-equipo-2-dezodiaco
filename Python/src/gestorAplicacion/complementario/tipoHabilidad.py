@@ -1,4 +1,10 @@
-﻿from enum import Enum
+﻿'''
+Enumerador para clasificar a las habilidades por tipo
+
+Autor: Edwin
+'''
+
+from enum import Enum
 
 class TipoHabilidad(Enum):
     

@@ -1,4 +1,10 @@
-﻿
+﻿'''
+ Son los espacios en donde se desarrollan los combates, también hay presencia de dioses y
+ enemigos.
+ 
+ Autor: Edwin
+ '''
+
 from tkinter import messagebox
 import random
 

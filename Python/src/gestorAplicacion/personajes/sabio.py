@@ -1,4 +1,13 @@
-﻿from .dios import Dios
+﻿'''
+Es esta clase se crea el Sabio, ente que se relaciona con el jugador cuando este los desee.
+
+Dentro de las funciones del sabio está asignar las misiones tanto de lucha como de combate
+y además de verificar que se cumplan.
+
+Autores: Yeferson, Edwin
+'''
+
+from .dios import Dios
 
 class Sabio(Dios):
     def __init__(self, nombre, habilidades, Objetos, Oponentes, misionesB, misionesL, totems):

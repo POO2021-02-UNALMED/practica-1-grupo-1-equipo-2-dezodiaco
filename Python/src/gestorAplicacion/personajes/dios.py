@@ -1,4 +1,10 @@
-﻿import random
+﻿'''
+Interactua con los peleadores otorgando y enseñando habilidades.
+
+Autor: Yeferson 
+'''
+
+import random
 from tkinter import *
 from tkinter import messagebox
 from gestorAplicacion.artefactos.objeto import Objeto

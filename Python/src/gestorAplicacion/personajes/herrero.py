@@ -1,4 +1,10 @@
-﻿from email import message
+﻿'''
+Se relaciona con el personaje, comercializa, repara y evoluciona objetos
+
+Autores: Camilo, Edwin
+'''
+
+from email import message
 from functools import partial
 import random
 import math

@@ -1,4 +1,11 @@
-﻿from .guardian import Guardian
+﻿'''
+Cada totem relaciona con el personaje ofreciendole mejoras en sus atributos, puede ayudarlo una vez o obsequiarle 
+un objeto sagrado a cambio de su existencia, desaparecerá al instante.
+
+Autor: Yeferson
+'''
+
+from .guardian import Guardian
 from .espiritu import Espiritu
 
 class Totem(Guardian, Espiritu):

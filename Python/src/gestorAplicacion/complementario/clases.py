@@ -1,4 +1,10 @@
-﻿from enum import Enum
+﻿'''
+Enumerador para las clases de personaje.
+
+Autor: Edwin
+'''
+
+from enum import Enum
 
 class Clases(Enum):
 

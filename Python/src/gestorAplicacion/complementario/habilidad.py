@@ -1,4 +1,11 @@
-﻿from functools import partial
+﻿'''
+Las habilidades pueden modificar o revertir las estadísticas de un personaje con 
+los métodos modificarEstadística y revertirEstadistica respectivamente.
+
+Autores: Edwin, Camilo.
+'''
+
+from functools import partial
 from tkinter import messagebox
 from gestorAplicacion.complementario.tipoEfecto import TipoEfecto
 from gestorAplicacion.complementario.tipoHabilidad import TipoHabilidad

@@ -1,4 +1,10 @@
-﻿from enum import Enum
+﻿'''
+Enumerador para los distinto efectos que puede tener una habilidad.
+
+Autor: Edwin
+'''
+
+from enum import Enum
 
 class TipoEfecto(Enum):
     QUEMAR = 1

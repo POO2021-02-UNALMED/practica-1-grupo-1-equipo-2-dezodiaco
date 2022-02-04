@@ -1,4 +1,10 @@
-﻿class Guardian:
+﻿'''
+Implementación de la clase abstracta. define el método apoyar
+
+Autor: Yeferson
+'''
+
+class Guardian:
 
 
     #Constructor para las clases hijas

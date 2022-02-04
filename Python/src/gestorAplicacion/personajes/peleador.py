@@ -1,4 +1,10 @@
-﻿from functools import partial
+﻿'''
+Personajes principales y enemigos
+
+Autores: Camilo, Edwin, Yeferson
+'''
+
+from functools import partial
 import random
 from gestorAplicacion.personajes.dios import castigar
 from gestorAplicacion.artefactos.tesoro import mostrarTesoro

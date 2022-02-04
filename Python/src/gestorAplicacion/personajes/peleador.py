@@ -264,11 +264,31 @@ class Peleador:
         except TotemNulo:
             nombreTotem = TotemNulo.corregir()
 
+        af = 0
+        am = 0
+        df = 0
+        dm = 0
+
+        if self._anillo != None:
+            af += self._anillo.getAtaqueFisico()
+            am += self._anillo.getAtaqueMagico()
+            df += self._anillo.getDefensaFisica()
+            dm += self._anillo.getDefensaMagica()
+
+        if self._arma != None:
+            af += self._arma.getAtaqueFisico()
+            am += self._arma.getAtaqueMagico()
+            df += self._arma.getDefensaFisica()
+            dm += self._arma.getDefensaMagica()
+        
+        if self._armadura != None:
+            af += self._armadura.getAtaqueFisico()
+            am += self._armadura.getAtaqueMagico()
+            df += self._armadura.getDefensaFisica()
+            dm += self._armadura.getDefensaMagica()
+
         texto = ("Estadísticas de \n" + self._nombre + ":\n \n" + "Clase " + self.getClase().name + "\n" + "Vida: " + str(self.getVida()) + 
-        "\nAtaque Físico: " + str(self.getAtaqueFisico()+self._anillo.getAtaqueFisico()+self._arma.getAtaqueFisico()+self._armadura.getAtaqueFisico())+ "\n" + 
-        "Ataque Magico: " + str(self.getAtaqueMagico()+self._anillo.getAtaqueMagico()+self._arma.getAtaqueMagico()+self._armadura.getAtaqueMagico()) + "\n" +
-		"Defensa Fisica: " + str(self.getDefensaFisica()+self._anillo.getDefensaFisica()+self._arma.getDefensaFisica()+self._armadura.getDefensaFisica()) + "\n" +
-		"Defensa Mágica: " + str(self.getDefensaMagica()+self._anillo.getDefensaMagica()+self._arma.getDefensaMagica()+self._armadura.getDefensaMagica())+ "\n" + 
+        "\nAtaque Físico: " + str(af)+ "\n" + "Ataque Magico: " + str(am) + "\n" +"Defensa Fisica: " + str(df) + "\n" +"Defensa Mágica: " + str(dm)+ "\n" + 
         "Totem: " + nombreTotem + "\nOro: "+ str(self.getOro()))
 	
         return texto

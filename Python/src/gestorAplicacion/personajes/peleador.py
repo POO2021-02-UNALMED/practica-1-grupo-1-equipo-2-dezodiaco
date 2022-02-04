@@ -264,10 +264,10 @@ class Peleador:
         except TotemNulo:
             nombreTotem = TotemNulo.corregir()
 
-        af = 0
-        am = 0
-        df = 0
-        dm = 0
+        af = self.getAtaqueFisico()
+        am = self.getAtaqueMagico()
+        df = self.getDefensaFisica()
+        dm = self.getDefensaMagica()
 
         if self._anillo != None:
             af += self._anillo.getAtaqueFisico()

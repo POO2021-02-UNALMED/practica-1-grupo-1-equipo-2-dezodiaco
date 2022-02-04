@@ -73,8 +73,8 @@ class Peleador:
             self._defensaFisica = 18
             self._defensaMagica = 12
             self._estadoInicial = [100,35,13,18,12]
-            self._arma = None#Objeto("Draco",None,10,TipoDeObjeto.LANZA,10,0,0,0,3,False,"lanza1.png")
-            self._armadura = None#Objeto("Malla de acero",None,10,TipoDeObjeto.ARMADURA,0,0,15,10,3,False,"arm1.png")
+            self._arma = Objeto("Draco",None,10,TipoDeObjeto.LANZA,10,0,0,0,3,False,"lanza1.png")
+            self._armadura = Objeto("Malla de acero",None,10,TipoDeObjeto.ARMADURA,0,0,15,10,3,False,"arm1.png")
             self._anillo = anillo
             self._oro = 100
         else: #clase == Clases.ENEMIGO:
@@ -319,7 +319,6 @@ class Peleador:
             for i in range(5):
                 if self._enfriamientos[i] == 0:
                     disponibles.append(i)
-            print(disponibles)
             if len(disponibles) != 0:
                 random.shuffle(disponibles)
                 indiceHabilidad = disponibles[0]
